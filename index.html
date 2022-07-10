@@ -20,7 +20,7 @@
             </a>
             <nav class="navigation">
                 <ul class="pages">
-                    <li class="pages-list"><a href="./index.html" class=" navigation-link">Студия</a></li>
+                    <li class="pages-list"><a href="./index.html" class="currentactive navigation-link">Студия</a></li>
                 
                     <li class="pages-list"><a href="./portfolio.html" class=" navigation-link">Портфолио</a></li>
 
@@ -28,12 +28,14 @@
                 </ul> 
             </nav>
             <div class="header-contacts-box">
-                <a href="mailto:info@devstudio.com" class=" header-contacts"><svg class="mail contact-icon" aria-hidden="true">
-                    <use href="./images/icons.svg#icon-email">
-            </svg>info@devstudio.com</a>
-                <a href="tel:+380961111111" class=" header-contacts"><svg class="smartphone contact-icon" aria-hidden="true">
-                    <use href="./images/icons.svg#icon-smartphone">
-             </svg>+38 096 111 11 11</a>
+                <a href="mailto:info@devstudio.com" class="mail-link header-contacts">
+                    <svg class="mail contact-icon" aria-hidden="true">
+                        <use href="./images/icons.svg#icon-email">
+                    </svg>info@devstudio.com</a>
+                <a href="tel:+380961111111" class="phone-link header-contacts">
+                    <svg class="smartphone contact-icon" aria-hidden="true">
+                        <use href="./images/icons.svg#icon-smartphone">
+                    </svg>+38 096 111 11 11</a>
             </div>
         </div>
     </header>
@@ -42,7 +44,18 @@
         <section class="main-page main-section">
             <div class="container main-page-content">
                 <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
-                <button type="button" onclick="window.location.href = 'https://www.edu.goit.global/';" class="button service-order">Заказать услугу</button>
+                <!--<button type="button" onclick="window.location.href = 'https://www.edu.goit.global/';"-->
+                <button type="button" class="button service-order" data-modal-open>Заказать услугу</button>
+            </div>
+
+            <div class="modal-bgd" data-modal>
+                <div class="data-modal-container">
+                    <button type="button" class="close-button" data-modal-close>
+                        <svg class="close-icon" aria-label="link mail" width="30" height="30">
+                            <use href="./images/icons.svg#icon-close">
+                        </svg>
+                    </button> 
+                </div>
             </div>
         </section>
         
@@ -96,9 +109,9 @@
                 <h2 class="subtitle">Чем мы занимаемся</h2>
                 
                 <ul class="job-pics">
-                    <li class="job-list"><img class="job-img" src="./images/box1.jpg" Width="370" alt="Кодинг"></li>
-                    <li class="job-list"><img class="job-img" src="./images/box2.jpg" Width="370" alt="Прототипирование"></li>
-                    <li class="job-list"><img class="job-img" src="./images/box3.jpg" Width="370" alt="Дизайн"></li>
+                    <li class="job-list"><img class="job-img" src="./images/box1.jpg" Width="370"><p class="busines-descr">Десктопные приложения</p></li>
+                    <li class="job-list"><img class="job-img" src="./images/box2.jpg" Width="370"><p class="busines-descr">Мобильные приложения</p></li>
+                    <li class="job-list"><img class="job-img" src="./images/box3.jpg" Width="370"><p class="busines-descr">Дизайнерские решения</p></li>
                 </ul>
             </div>  
         </section>
@@ -273,5 +286,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
 </body>
 </html>
